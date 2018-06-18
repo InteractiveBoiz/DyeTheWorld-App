@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mapLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteY="25dp">
+
+    <fragment
+        android:id="@+id/mapLayout"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".MapsActivity"/>
+
+    <ImageView
+        android:id="@+id/ic_gps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="18dp"
+        android:layout_marginTop="8dp"
+        app:layout_constrainedHeight="true"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NavBar"
+        app:srcCompat="@drawable/ic_gps"
+        />
+
+    <Button
+        android:id="@+id/StartButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        app:layout_constraintBottom_toBottomOf="@+id/StopRoute"
+        app:layout_constraintStart_toStartOf="@+id/mapLayout"
+        app:layout_constraintTop_toTopOf="@+id/StopRoute"
+        />
+
+    <Button
+        android:id="@+id/StopRoute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="74dp"
+        android:layout_marginEnd="2dp"
+        android:text="Stop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/mapLayout"
+        />
+
+    <TextView
+        android:id="@+id/RouteStarted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:text="R :"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/StartButton"
+        />
+
+    <TextView
+        android:id="@+id/Distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="78dp"
+        android:layout_marginTop="12dp"
+        android:text="Distance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/StopRoute"
+        />
+
+    <LinearLayout
+        android:id="@+id/layoutTeam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <Button
+            android:id="@+id/btnGreenTeam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/holo_green_dark"
+            android:text="Green"/>
+
+        <Button
+            android:id="@+id/btnBlueTeam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/holo_blue_dark"
+            android:text="Blue"/>
+
+        <Button
+            android:id="@+id/btnRedTeam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/holo_red_dark"
+            android:text="Red"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/NavBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="3dp"
+        android:layout_marginStart="3dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mapLayout"
+        >
+
+        <ImageButton
+            android:id="@+id/nav_leaderboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/nav_leaderboard"/>
+
+        <ImageButton
+            android:id="@+id/nav_clan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            app:layout_constraintBottom_toBottomOf="@+id/nav_menu"
+            app:layout_constraintEnd_toStartOf="@+id/nav_menu"
+            app:layout_constraintStart_toEndOf="@+id/nav_leaderboard"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/nav_clan"/>
+
+        <ImageButton
+            android:id="@+id/nav_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/nav_clan"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/nav_menu"/>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/playerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#64669900"
+    tools:layout_editor_absoluteY="25dp">
+
+    <ImageView
+        android:id="@+id/playerImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="85dp"
+        app:layout_constraintEnd_toEndOf="@+id/colorIcon"
+        app:layout_constraintStart_toStartOf="@+id/colorIcon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/image_icon"
+        />
+
+    <ImageView
+        android:id="@+id/clanImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/clanName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/image_icon"
+        />
+
+    <TextView
+        android:id="@+id/playerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="21dp"
+        android:text="PlayerName"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playerMenuTitle"
+        />
+
+    <TextView
+        android:id="@+id/teamName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="TeamName"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/changePassword"
+        app:layout_constraintTop_toBottomOf="@+id/changePassword"
+        />
+
+    <TextView
+        android:id="@+id/changePassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Password?"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/playerName"
+        app:layout_constraintTop_toBottomOf="@+id/playerName"
+        />
+
+    <TextView
+        android:id="@+id/changeColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Color?"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/teamName"
+        app:layout_constraintTop_toBottomOf="@+id/teamName"
+        />
+
+    <TextView
+        android:id="@+id/clanLeave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:layout_marginTop="10dp"
+        android:text="Leave Clan?"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/clanName"
+        app:layout_constraintTop_toBottomOf="@+id/clanName"
+        />
+
+    <TextView
+        android:id="@+id/playerMenuTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="playerMenuTitle"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Player Menu"/>
+
+    <TextView
+        android:id="@+id/clanName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="56dp"
+        android:text="Clan: ClanName"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/divider"
+        app:layout_constraintStart_toEndOf="@+id/clanImage"
+        app:layout_constraintTop_toBottomOf="@+id/distance"
+        />
+
+    <TextView
+        android:id="@+id/distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="31dp"
+        android:text="Distance: Value"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/colorIcon"
+        app:layout_constraintTop_toBottomOf="@+id/changeColor"
+        />
+
+    <ImageView
+        android:id="@+id/colorIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/changeColor"
+        app:layout_constraintEnd_toEndOf="@+id/clanImage"
+        app:layout_constraintStart_toStartOf="@+id/clanImage"
+        app:layout_constraintTop_toTopOf="@+id/teamName"
+        app:srcCompat="@drawable/color_image"
+        />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:layout_marginBottom="69dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="57dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="@+id/clanName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/distance"
+        />
+
+</android.support.constraint.ConstraintLayout>
